@@ -64,7 +64,7 @@ Use*** `/bin xxxxx` ***to check bin on bin-su.***",
  }if(strpos($text,"/bin") !== false){ 
 $bin = trim(str_replace("/bin","",$text)); 
 
-$data = json_decode(file_get_contents("https://bins-su-api.now.sh/api/$bin"),true);
+$data = json_decode(file_get_contents("https://lookup.binlist.net/$bin"),true);
 $bank = $data['data']['bin'];
 $vendor =  $data['data']['vendor'];
 $type =  $data['data']['type'];
